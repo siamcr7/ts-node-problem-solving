@@ -1,5 +1,8 @@
 import { Solution } from './Solution';
 
+/**
+ * The program will start from here
+ */
 export class RunProgram {
   inputString = '';
 

@@ -1,3 +1,7 @@
+/**
+ * We will pass the input lines here.
+ * And start to write our solution from here.
+ */
 export class Solution {
   constructor(private inputs: string[]) {
     this.startSoln();
