@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack:test": "webpack && type input.txt | node ./dist/bundle.js",
-    "local:test": "type input.txt | node ./dist/src/index.js"
+    "local:test": "type input.txt | node ./dist/index.js"
   },
   "author": "",
   "license": "ISC",
