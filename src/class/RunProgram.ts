@@ -1,5 +1,4 @@
 import { Solution } from './Solution';
-import { isNumber } from 'util';
 
 /**
  * The program will start from here
