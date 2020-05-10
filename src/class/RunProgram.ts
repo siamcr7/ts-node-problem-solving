@@ -19,8 +19,8 @@ export class RunProgram {
   /**
    * Optimized to reduce TLE while taking input
    */
-  private processInputString<T>(): T[] {
-    const result: T[] = [];
+  private processInputString(): number[] {
+    const result: number[] = [];
 
     let madeUp = '';
     for (let i = 0; i < this.inputString.length; i++) {
@@ -29,7 +29,7 @@ export class RunProgram {
       // if empty or other character is found
       if (currentChar === ' ' || currentChar.length !== currentChar.trim().length) {
         if (madeUp !== '') {
-          result.push(madeUp as unknown as T);
+          result.push(+madeUp);
           madeUp = '';
         }
       } else {
@@ -38,7 +38,7 @@ export class RunProgram {
     }
 
     if (madeUp !== '') {
-      result.push(madeUp as unknown as T);
+      result.push(+madeUp);
     }
 
     return result;
