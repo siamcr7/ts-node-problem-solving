@@ -13,7 +13,11 @@ export class RunProgram {
     process.stdin.on('data', (c) => (this.inputString += c));
     process.stdin.on('end', () => {
 
-      const newSolution = new Solution(this.processInputString());
+      const processedData = this.processInputString<number>();
+
+      console.log('See: ', processedData);
+
+      // const newSolution = new Solution(this.processInputString());
     });
   }
 
