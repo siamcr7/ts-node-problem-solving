@@ -1,6 +1,4 @@
-import { Solution } from './Solution';
-import { isNumber } from 'util';
-import { TwoSum } from '../solutions/leet-code/two-sum';
+import { SolutionLCOAPN } from '../solutions/leet-code/letter-combinations-of-a-phone-number';
 
 /**
  * The program will start from here
@@ -14,8 +12,8 @@ export class RunProgram {
     process.stdin.on('data', (c) => (this.inputString += c));
     process.stdin.on('end', () => {
 
-      const processedData = this.processInputString(true) as number[];
-      const sol = new TwoSum(processedData);
+      // const processedData = this.processInputString(false) as string[];
+      const sol = new SolutionLCOAPN(this.inputString);
     });
   }
 
