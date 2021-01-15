@@ -3,7 +3,5 @@ export abstract class SolutionBase<TInput> {
     this.startSolution();
   }
 
-  startSolution(): void {
-
-  }
+  abstract startSolution(): void;
 }
