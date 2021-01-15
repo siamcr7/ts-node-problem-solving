@@ -1,5 +1,6 @@
 import { Solution } from './Solution';
 import { isNumber } from 'util';
+import { TwoSum } from '../solutions/leet-code/two-sum';
 
 /**
  * The program will start from here
@@ -13,19 +14,16 @@ export class RunProgram {
     process.stdin.on('data', (c) => (this.inputString += c));
     process.stdin.on('end', () => {
 
-      const processedData = this.processInputString<number>();
-
-      console.log('See: ', processedData);
-
-      // const newSolution = new Solution(this.processInputString());
+      const processedData = this.processInputString(true) as number[];
+      const sol = new TwoSum(processedData);
     });
   }
 
   /**
    * Optimized to reduce TLE while taking input
    */
-  private processInputString<T>(): T[] {
-    const result: T[] = [];
+  private processInputString(isAllNumber: boolean): (number | string)[] {
+    const result: (number | string)[] = [];
 
     let madeUp = '';
     for (let i = 0; i < this.inputString.length; i++) {
@@ -34,7 +32,11 @@ export class RunProgram {
       // if empty or other character is found
       if (currentChar === ' ' || currentChar.length !== currentChar.trim().length) {
         if (madeUp !== '') {
-          result.push(madeUp as unknown as T);
+          if (isAllNumber) {
+            result.push(+(madeUp));
+          } else {
+            result.push(madeUp);
+          }
           madeUp = '';
         }
       } else {
@@ -43,7 +45,11 @@ export class RunProgram {
     }
 
     if (madeUp !== '') {
-      result.push(madeUp as unknown as T);
+      if (isAllNumber) {
+        result.push(+(madeUp));
+      } else {
+        result.push(madeUp);
+      }
     }
 
     return result;
