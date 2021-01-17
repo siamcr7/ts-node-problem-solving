@@ -1,4 +1,4 @@
-import { SolutionLCOAPN } from '../solutions/leet-code/letter-combinations-of-a-phone-number';
+import { Cf1473A } from '../solutions/code-forces/cf-1473-a';
 
 /**
  * The program will start from here
@@ -12,8 +12,8 @@ export class RunProgram {
     process.stdin.on('data', (c) => (this.inputString += c));
     process.stdin.on('end', () => {
 
-      // const processedData = this.processInputString(false) as string[];
-      const sol = new SolutionLCOAPN(this.inputString);
+      const processedData = this.processInputString(true) as number[];
+      const sol = new Cf1473A(processedData);
     });
   }
 
