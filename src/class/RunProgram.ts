@@ -1,4 +1,4 @@
-import { Cf1473A } from '../solutions/code-forces/cf-1473-a';
+import { LCMaxNumberOfKSumPairs } from '../solutions/leet-code/max-number-of-k-sum-pairs';
 
 /**
  * The program will start from here
@@ -13,7 +13,7 @@ export class RunProgram {
     process.stdin.on('end', () => {
 
       const processedData = this.processInputString(true) as number[];
-      const sol = new Cf1473A(processedData);
+      const sol = new LCMaxNumberOfKSumPairs(processedData);
     });
   }
 
