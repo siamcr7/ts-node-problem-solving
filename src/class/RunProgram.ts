@@ -9,16 +9,19 @@ export class RunProgram {
 
   constructor() {
     this.inputString = '';
-    process.stdin.setEncoding('utf8');
-    process.stdin.on('data', (c) => (this.inputString += c));
-    process.stdin.on('end', () => {
+    // process.stdin.setEncoding('utf8');
+    // process.stdin.on('data', (c) => (this.inputString += c));
+    // process.stdin.on('end', () => {
 
-      const processedData = this.processInputString<number>();
+    //   const processedData = this.processInputString<number>();
 
-      console.log('See: ', processedData);
+    //   console.log('See: ', processedData);
 
-      // const newSolution = new Solution(this.processInputString());
-    });
+    //   // const newSolution = new Solution(this.processInputString());
+    // });
+
+    const input: number[] = [1, 2, 3, 4, 5];
+    new Solution(input);
   }
 
   /**
